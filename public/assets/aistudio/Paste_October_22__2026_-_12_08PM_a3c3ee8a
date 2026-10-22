@@ -1,0 +1,1026 @@
+# ACTIONGUARD AI — MASTER VISUAL REDESIGN PROMPT
+## Project Codename: Project Kinetic
+
+### YOUR ROLE
+
+Act as a world-class digital product designer, creative director, senior frontend engineer, motion designer, interaction designer, and design-systems architect.
+
+Your design references should be the craftsmanship of Linear, the spatial polish of Raycast, the interaction quality of high-end Apple software, the precision of Stripe dashboards, and the immersive presentation of award-winning Awwwards websites.
+
+Do not copy these products. Learn from their principles of hierarchy, restraint, responsiveness, animation, typography, and interaction design.
+
+You are working on an EXISTING, FUNCTIONAL APPLICATION called ActionGuard AI.
+
+Your task is to transform its visual identity and user experience into a distinctive, premium, highly interactive software product.
+
+The result must look intentionally art-directed by a professional product design team rather than generated from a generic AI dashboard template.
+
+IMPORTANT: Modify the existing application. Do not create a separate replacement application.
+
+---
+
+# 1. ABSOLUTE RULE: PRESERVE EXISTING FUNCTIONALITY
+
+Before changing anything, inspect the existing source code, component hierarchy, routing, state management, API endpoints, backend services, simulator, authentication if present, and data persistence.
+
+Understand how the current application works.
+
+Preserve all existing working functionality, including:
+
+- Natural-language command submission.
+- AI planning.
+- Structured action plans.
+- Device simulation.
+- Backend tool execution.
+- Approval workflows.
+- Action permissions.
+- Independent verification.
+- Failure injection.
+- Recovery workflows.
+- Execution history.
+- Audit records.
+- Integration status.
+- Settings.
+- Gemini integration.
+- Optional AWS integration.
+- Existing MCP-related functionality, if implemented.
+- Existing tests.
+- Existing persistence behavior.
+
+Do not remove functionality to simplify the redesign.
+
+Do not replace real interactions with visual mockups.
+
+Do not replace backend requests with hard-coded responses.
+
+Do not change the semantics of the application's APIs.
+
+Do not delete working components merely because they do not fit the new design.
+
+Do not rename API fields or database fields without a compelling compatibility reason.
+
+Keep the existing business logic separate from presentation components.
+
+If a component must be restructured, preserve its behavior and verify that the original workflow still works.
+
+Treat this as a comprehensive UI/UX transformation, not a backend rewrite.
+
+---
+
+# 2. CREATIVE DIRECTION
+
+The current design must evolve from an AI-generated dashboard into a premium, immersive, futuristic control environment.
+
+The application should feel like a combination of:
+
+- A sophisticated operations centre.
+- A spatial smart-home interface.
+- A precision-engineered developer tool.
+- A cinematic but restrained interactive experience.
+
+The design should communicate intelligence, trust, clarity, and control.
+
+Avoid the appearance of:
+- A generic SaaS template.
+- A collection of identical cards.
+- A standard AI chatbot.
+- A dashboard made entirely from rounded rectangles.
+- A landing page overloaded with gradients.
+- A neon cyberpunk game interface.
+- A template with decorative charts that have no purpose.
+
+Create an original design identity for ActionGuard AI.
+
+The application should be visually recognizable even without its logo.
+
+---
+
+# 3. NEW VISUAL IDENTITY
+
+Create a design system called ACTIONGUARD / KINETIC.
+
+## Colour direction
+
+Use a sophisticated near-black and warm-neutral palette.
+
+Suggested tokens:
+
+--background: #090B0F;
+--background-secondary: #0D1016;
+--surface-primary: #12161D;
+--surface-secondary: #171C24;
+--surface-hover: #1D2430;
+--border-subtle: rgba(255,255,255,0.07);
+--border-active: rgba(255,255,255,0.16);
+--text-primary: #F3F5F8;
+--text-secondary: #A0A8B5;
+--text-muted: #6D7786;
+--accent-blue: #76A9FF;
+--accent-cyan: #71E0D1;
+--success: #5CE0A0;
+--warning: #F6C96A;
+--danger: #FF747F;
+
+These are starting tokens, not an invitation to colour every component with every accent.
+
+Use colour intentionally.
+
+Most surfaces should remain neutral.
+
+Reserve vivid colour for:
+- Active interactions.
+- Focus states.
+- Verified outcomes.
+- Warnings.
+- Errors.
+- Selected controls.
+- Live execution indicators.
+
+Do not turn every border blue.
+
+Do not use permanent neon glows around every card.
+
+## Typography
+
+Use a distinctive combination of:
+
+- A refined modern sans-serif for interface text.
+- A slightly more expressive display face for major headlines.
+- A monospaced typeface for technical identifiers, timestamps, action IDs, and system states.
+
+Use available fonts or load appropriate web fonts where supported.
+
+If using external font services, provide reliable fallbacks.
+
+Typography should be deliberate:
+- Large, confident headlines.
+- Compact uppercase labels for technical metadata.
+- Comfortable body text.
+- Carefully controlled line lengths.
+- Consistent numeric alignment.
+- Strong contrast between primary and secondary information.
+
+Avoid making every heading bold.
+
+Avoid using the same font size and weight for all card titles.
+
+---
+
+# 4. REMOVE THE GENERIC DASHBOARD AESTHETIC
+
+Audit the entire existing interface and identify repeated patterns that make it look AI-generated.
+
+Replace repetitive structures with purposeful composition.
+
+Examples:
+
+Instead of six identical statistic cards, use one dominant status visualization, a compact set of metrics, and a meaningful activity timeline.
+
+Instead of placing every piece of information inside a rounded card, use:
+- Open canvas regions.
+- Thin separators.
+- Editorial layouts.
+- Asymmetric columns.
+- Dense technical tables where appropriate.
+- Floating panels only where they improve interaction.
+- Carefully grouped information.
+
+Instead of generic empty charts, show real execution activity.
+
+Instead of generic robot illustrations, create an original visual language based on:
+- Signal paths.
+- State transitions.
+- Precision grids.
+- Command flow.
+- Verification markers.
+- Device topology.
+
+The interface should feel engineered, not decorated.
+
+Maintain consistency without making every screen identical.
+
+---
+
+# 5. CREATE A SIGNATURE INTERACTIVE EXPERIENCE
+
+The application must have at least one memorable visual interaction that users will immediately recognize as unique to ActionGuard AI.
+
+Create a central visual element called THE TRUST ENGINE.
+
+This is a custom interactive visualization of the application's execution and verification process.
+
+The Trust Engine must visually represent:
+
+REQUEST
+→ PLAN
+→ APPROVAL
+→ EXECUTION
+→ VERIFICATION
+→ RESULT
+
+Represent these stages as a connected, animated system rather than a generic progress bar.
+
+Use a combination of:
+- SVG.
+- CSS transforms.
+- Canvas only if genuinely necessary.
+- Motion primitives from an existing compatible library.
+
+Create a distinctive visual composition of connected nodes, state indicators, and directional paths.
+
+Each stage should have:
+- A visual identity.
+- A current state.
+- A concise label.
+- An optional detail panel.
+- An interactive hover state.
+- An appropriate animation.
+
+The active stage should have a subtle moving signal or animated path.
+
+Completed stages should settle into a stable state.
+
+Failed stages should display a controlled interruption in the visual flow.
+
+Unverified stages should appear unresolved rather than successful.
+
+Approval-required stages should clearly communicate that user input is needed.
+
+The diagram must use actual application execution state.
+
+Never animate a successful execution when the backend reports failure.
+
+Clicking a stage must reveal its real associated execution information.
+
+The Trust Engine must remain understandable and usable at mobile sizes.
+
+Do not create a decorative visualization disconnected from the underlying system.
+
+---
+
+# 6. CUSTOM CURSOR SYSTEM
+
+Create a premium interactive cursor experience for desktop devices.
+
+The cursor must feel responsive, elegant, and purposeful.
+
+Implement a layered cursor system:
+
+LAYER 1 — PRIMARY CURSOR
+
+A small, precise circular indicator that follows the pointer.
+
+LAYER 2 — FOLLOWER
+
+A slightly larger translucent ring that follows with subtle easing.
+
+LAYER 3 — INTERACTION STATE
+
+When hovering over meaningful interactive elements:
+- Expand or contract the follower.
+- Change its border or fill.
+- Display a small contextual indicator when useful.
+- Apply subtle magnetic attraction to selected controls.
+
+LAYER 4 — CLICK FEEDBACK
+
+On click:
+- Trigger a short scale transition.
+- Create a subtle ripple or radial pulse.
+- Respect reduced-motion settings.
+
+LAYER 5 — SPECIAL INTERACTIONS
+
+On the command input:
+- Change the cursor state to indicate text entry.
+- Avoid covering the caret or selection.
+
+On draggable elements:
+- Show a grab or dragging state.
+
+On disabled controls:
+- Do not imply that interaction is possible.
+
+On the Trust Engine:
+- Highlight the node or connection under the pointer.
+
+Implementation rules:
+
+- Hide the custom cursor only when it is safe to do so.
+- Keep the native cursor on touch devices.
+- Preserve usable cursor behavior for text inputs.
+- Respect prefers-reduced-motion.
+- Avoid cursor effects that interfere with text selection.
+- Ensure the cursor does not block clicks.
+- Use pointer-events: none for decorative cursor layers.
+- Avoid global event listeners that leak.
+- Clean up event listeners on component unmount.
+- Keep pointer updates efficient using requestAnimationFrame where appropriate.
+- Never make the interface unusable if the custom cursor fails.
+
+Use a subtle easing curve rather than exaggerated trailing movement.
+
+The effect should feel expensive, not sluggish.
+
+Do not implement an oversized cartoon cursor.
+
+---
+
+# 7. MAGNETIC BUTTONS AND MICRO-INTERACTIONS
+
+Create a consistent interaction language for buttons and interactive surfaces.
+
+Primary buttons should respond to pointer movement with restrained magnetic movement where appropriate.
+
+Hovering over a button may:
+- Slightly shift its contents.
+- Reveal a small directional arrow.
+- Change the surface luminance.
+- Animate an icon.
+- Increase border clarity.
+
+Clicking a button may:
+- Compress the button very slightly.
+- Trigger a short feedback animation.
+- Show an appropriate loading state.
+- Transition into the resulting state.
+
+Do not make every button magnetic.
+
+Do not animate large layout shifts on hover.
+
+Never allow magnetic movement to move a control away from the pointer.
+
+Ensure the click target remains stable and accessible.
+
+Create specialized interactions for:
+- New Command.
+- Execute Plan.
+- Approve Action.
+- Reject Action.
+- Verify State.
+- Retry Operation.
+- Run Reliability Demo.
+- Reset Demo.
+- Export History.
+
+Each interaction should communicate its function.
+
+High-risk operations must remain visually serious and must not be disguised as casual animated actions.
+
+---
+
+# 8. COMMAND CENTRE REDESIGN
+
+The Command Centre is the most important screen.
+
+Redesign it as an immersive operational workspace.
+
+## Layout
+
+Use a carefully composed three-region layout on wide screens.
+
+LEFT:
+Context and device state.
+
+CENTRE:
+Command and action plan.
+
+RIGHT:
+Execution, verification, and activity.
+
+The three regions should not be identical in width.
+
+Give the command and plan the most visual importance.
+
+Allow panels to collapse or expand when needed.
+
+On smaller screens, reorganize the layout into a readable sequence.
+
+## Command input
+
+Create a visually distinctive command composer.
+
+It should feel like a precision instrument rather than an ordinary chat input.
+
+Include:
+- A large text input.
+- A compact command prompt label.
+- A subtle animated focus indicator.
+- Example commands.
+- A submit button.
+- Keyboard shortcut hints where supported.
+- A clear disabled state.
+- A loading state.
+- A cancellation option when appropriate.
+
+Do not use a fake voice waveform unless actual audio input is implemented.
+
+Do not display decorative AI-thinking animations that continue after a response has arrived.
+
+## Plan visualization
+
+Render actions as connected stages with clear dependencies.
+
+Each action should include:
+- Action number.
+- Device.
+- Requested change.
+- Risk level.
+- Approval status.
+- Execution status.
+- Verification status.
+
+Use subtle connecting lines to communicate order.
+
+Animate the appearance of plan steps with short staggered transitions.
+
+Do not delay real actions merely to create an animation.
+
+The animation must reflect actual application events.
+
+## Execution timeline
+
+Build a live timeline that updates as the backend emits events or as the application retrieves execution updates.
+
+Use distinct visual treatments for:
+- Planning.
+- Approval.
+- Execution.
+- Verification.
+- Recovery.
+- Failure.
+- Completion.
+
+Allow each timeline event to expand and reveal its details.
+
+Make the final outcome impossible to misinterpret.
+
+---
+
+# 9. OVERVIEW SCREEN: MAKE IT EDITORIAL AND DISTINCTIVE
+
+Redesign the dashboard with a more sophisticated visual hierarchy.
+
+The top section should include:
+- A concise contextual greeting or workspace title.
+- Current environment.
+- Simulator health.
+- A prominent command entry point.
+
+Avoid a giant marketing hero that wastes the first screen.
+
+The main content should contain:
+
+A. TRUST ENGINE
+
+A compact but meaningful visualization of the latest execution state.
+
+B. HOUSE STATUS
+
+A spatial arrangement of actual simulated devices.
+
+Use a room-oriented composition instead of identical generic cards.
+
+For example:
+- Living room.
+- Bedroom.
+- Entryway.
+
+Each room should display its associated devices.
+
+C. RECENT EXECUTION
+
+Show the latest meaningful command and its outcome.
+
+D. RELIABILITY SUMMARY
+
+Show actual verified, failed, and unverified results.
+
+E. ACTIVITY STREAM
+
+Show recent events with clear timestamps and event types.
+
+Use a visually varied layout.
+
+Do not make all five sections equally prominent.
+
+Use open space intentionally.
+
+---
+
+# 10. DEVICE INTERFACE: CREATE A SPATIAL HOUSEHOLD MAP
+
+Create an interactive household overview.
+
+Represent the demo environment as a stylized, original floor-plan-inspired visualization.
+
+This is an interface illustration, not a claim that a real home has been scanned.
+
+Display:
+- Living room.
+- Bedroom.
+- Entryway.
+
+Place device markers in relevant regions.
+
+Each marker must reflect the current simulator state.
+
+Example:
+- A light marker shows whether the light is on.
+- A thermostat marker displays its current simulated temperature.
+- A lock marker indicates locked or unlocked.
+
+Interactions:
+- Hovering over a room highlights its devices.
+- Clicking a device opens its details.
+- Clicking a room filters related activity.
+- Device state changes update the visualization.
+- Offline devices have a clear status indicator.
+- Selected devices show an accessible focus state.
+
+Add restrained animations:
+- Lights brighten or dim when their state changes.
+- Temperature indicators transition smoothly.
+- Lock icons animate between supported states.
+- Device markers briefly highlight after verified operations.
+
+Do not use these animations as a substitute for actual state changes.
+
+The floor-plan representation must be responsive and remain understandable on mobile.
+
+Use original SVG shapes or CSS geometry.
+
+Do not depend on external images to communicate essential device states.
+
+---
+
+# 11. ANIMATED STATE TRANSITIONS
+
+Implement a shared animation system.
+
+Use Framer Motion or Motion for React if the dependency is compatible with the existing project. Otherwise, use well-structured CSS animations and the Web Animations API.
+
+Define reusable animation presets:
+
+- fadeIn.
+- fadeOut.
+- slideIn.
+- slideOut.
+- scaleIn.
+- subtleLift.
+- statusPulse.
+- pathDraw.
+- staggerChildren.
+- successReveal.
+- errorReveal.
+- panelExpand.
+- panelCollapse.
+
+Use consistent durations and easing.
+
+Suggested timings:
+- Micro-interactions: 100–180 ms.
+- Button feedback: 100–160 ms.
+- Small panel transitions: 180–260 ms.
+- Larger view transitions: 220–350 ms.
+- Complex visualization transitions: 300–500 ms.
+
+These are guidelines, not rigid requirements.
+
+Do not make ordinary navigation feel slow.
+
+Do not delay API calls until an animation completes.
+
+Do not add a long artificial loading screen.
+
+Animations must remain synchronized with application state.
+
+---
+
+# 12. SUCCESS, FAILURE, AND UNCERTAINTY ANIMATIONS
+
+Design three unmistakably different outcome experiences.
+
+## VERIFIED SUCCESS
+
+When a post-action read confirms the desired state:
+- Animate the relevant Trust Engine node.
+- Draw the completed connection.
+- Show a restrained confirmation pulse.
+- Reveal the verification result.
+- Update the relevant device visualization.
+- Add the event to the timeline.
+
+The success animation must only occur after genuine verification.
+
+## FAILURE
+
+When an operation fails:
+- Interrupt the relevant connection.
+- Reveal the failure reason.
+- Mark the affected action.
+- Preserve completed earlier actions.
+- Present safe recovery options.
+
+Do not shake the entire interface.
+
+Avoid alarming full-screen red effects.
+
+## UNVERIFIED
+
+When execution may have occurred but the final state cannot be confirmed:
+- Use an unresolved visual state.
+- Distinguish it from failure and success.
+- Show the last known state.
+- Explain what evidence is missing.
+- Offer a reconciliation action.
+
+Never animate an unverified action into a success state.
+
+---
+
+# 13. TRANSITIONS BETWEEN SCREENS
+
+Implement polished navigation transitions.
+
+Use:
+- Short fades.
+- Subtle horizontal movement where appropriate.
+- Shared-element transitions when practical.
+- Consistent sidebar state changes.
+- Smooth panel resizing.
+- Thoughtful page-entry animations.
+
+Do not animate every component independently.
+
+Maintain a stable visual anchor during navigation.
+
+Avoid full-screen transitions that obscure the interface for too long.
+
+Preserve keyboard focus and accessibility when routes change.
+
+Use URL-based routing if the existing application already supports it.
+
+Do not break browser back and forward navigation.
+
+---
+
+# 14. INTERACTIVE EXECUTION HISTORY
+
+Redesign history as a high-quality operational timeline.
+
+Each record should have a compact summary and an expandable detail view.
+
+Hovering over a record should reveal subtle affordances.
+
+Clicking a record should open a detailed execution view containing:
+- Original command.
+- Plan.
+- Approvals.
+- Tool calls.
+- Verification records.
+- Failure and recovery details.
+- Final outcome.
+
+Use animated timeline connectors.
+
+Allow filtering without reloading the entire application unnecessarily.
+
+Include a meaningful visual difference between:
+- Completed and verified.
+- Partially completed.
+- Failed.
+- Unverified.
+- Cancelled.
+
+Do not depend on colour alone.
+
+Use timestamps and actual stored records.
+
+---
+
+# 15. INTEGRATION STATUS DESIGN
+
+Create a premium integration status page.
+
+Use compact, well-designed integration rows or panels for:
+- Gemini.
+- Local simulator.
+- Amazon Bedrock.
+- Alexa+ / MCP extension, if implemented.
+- Other existing integrations.
+
+Show actual connection state.
+
+Create different treatments for:
+- Connected.
+- Not configured.
+- Checking connection.
+- Authentication required.
+- Connection failed.
+- Simulated.
+
+When a connection test is running, show a restrained progress indicator.
+
+When it succeeds, display the actual response status.
+
+When it fails, show a useful error message.
+
+Do not use continuously animated green indicators to imply that an unconfigured service is connected.
+
+---
+
+# 16. MICRO-DETAILS THAT MAKE THE PRODUCT FEEL REAL
+
+Add thoughtful details throughout the application.
+
+Examples:
+- Timestamps that update appropriately.
+- Compact environment badges.
+- Clear keyboard shortcuts.
+- Tooltips with a short delay.
+- Contextual empty states.
+- Useful confirmation dialogs.
+- Subtle divider transitions.
+- Carefully aligned tables.
+- Monospaced device IDs.
+- Consistent icon geometry.
+- Refined scrollbars where supported.
+- Skeleton loaders that match the final content layout.
+- Clear hover, focus, active, disabled, and loading states.
+- Smooth expansion of execution details.
+- Properly styled validation errors.
+- Small confirmation indicators after successful exports.
+- Helpful copy-to-clipboard feedback.
+
+Use these details only where they improve usability.
+
+Do not add random blinking indicators or fake live telemetry.
+
+Do not invent real-time events.
+
+---
+
+# 17. OPTIONAL IMMERSIVE COMMAND EXPERIENCE
+
+Create an optional expanded command interface.
+
+When the user activates the command composer, allow it to expand into a larger, focused workspace.
+
+The expanded state may include:
+- The user's command.
+- Suggested example commands.
+- Relevant device context.
+- A concise planning explanation.
+- The generated action plan.
+
+Use a subtle background dimming effect.
+
+Keep the command text intact during expansion and collapse.
+
+The interface must remain responsive.
+
+Do not create a full-screen modal that traps users or prevents access to important safety controls.
+
+Allow closing with Escape where appropriate.
+
+Maintain appropriate focus management.
+
+---
+
+# 18. PERFORMANCE REQUIREMENTS
+
+Interactive polish must not damage performance.
+
+Requirements:
+- Avoid excessive blur filters.
+- Avoid large continuously animated box shadows.
+- Avoid unnecessary WebGL.
+- Avoid expensive layout calculations on every pointer movement.
+- Prefer transform and opacity animations.
+- Throttle or schedule pointer updates efficiently.
+- Avoid excessive DOM nodes in animated visualizations.
+- Avoid rerendering the entire dashboard for one device-state update.
+- Clean up timers and animation frames.
+- Avoid memory leaks.
+- Avoid unnecessary dependencies.
+- Preserve the application's existing API behavior.
+
+Do not introduce a heavy 3D engine merely for decorative effect.
+
+Use CSS and SVG for most interactions.
+
+---
+
+# 19. ACCESSIBILITY REQUIREMENTS
+
+The custom cursor and animations are enhancements, not prerequisites for using the product.
+
+The interface must remain fully usable with:
+- A native mouse cursor.
+- A keyboard.
+- Touch input.
+- Screen readers.
+
+Respect prefers-reduced-motion.
+
+When reduced motion is enabled:
+- Disable cursor follower lag.
+- Remove magnetic button movement.
+- Replace large transitions with immediate or minimal transitions.
+- Keep state changes understandable.
+- Preserve all functionality.
+
+Do not hide essential status information inside hover-only interactions.
+
+Use semantic HTML and accessible labels.
+
+Ensure all interactive visualizations have an accessible textual equivalent.
+
+Do not use animation as the only indication that an action succeeded.
+
+---
+
+# 20. RESPONSIVE BEHAVIOR
+
+Desktop:
+- Full navigation.
+- Custom cursor.
+- Multi-column Command Centre.
+- Expanded Trust Engine.
+- Interactive floor plan.
+
+Tablet:
+- Collapsible navigation.
+- Reduced panel density.
+- Simplified cursor effects where appropriate.
+- Responsive execution timeline.
+
+Mobile:
+- Native touch behavior.
+- No custom cursor.
+- Single-column content.
+- Compact status visualization.
+- Readable action cards.
+- Accessible approval controls.
+- No horizontal overflow.
+- No hover-dependent functionality.
+
+Test representative viewport widths:
+- 1440 px.
+- 1280 px.
+- 1024 px.
+- 768 px.
+- 390 px.
+- 360 px.
+
+These are test targets, not a reason to hard-code the entire layout around specific widths.
+
+---
+
+# 21. IMPLEMENTATION GUIDELINES
+
+First inspect the current application.
+
+Identify:
+- Existing design tokens.
+- Existing routes.
+- Existing shared components.
+- Existing state management.
+- Existing working interactions.
+- Existing test coverage.
+- Existing animation dependencies.
+
+Then implement the redesign in small, controlled stages.
+
+Stage 1:
+Create the new design tokens, typography, and component foundations.
+
+Stage 2:
+Redesign navigation, header, buttons, inputs, and shared surfaces.
+
+Stage 3:
+Redesign the Overview and Command Centre.
+
+Stage 4:
+Implement the Trust Engine visualization.
+
+Stage 5:
+Implement the interactive household map.
+
+Stage 6:
+Redesign history, devices, integrations, and settings.
+
+Stage 7:
+Implement the cursor, magnetic buttons, and animation system.
+
+Stage 8:
+Polish responsive layouts and accessibility.
+
+Stage 9:
+Run tests and fix regressions.
+
+Reuse existing dependencies when possible.
+
+If adding a new dependency, verify that it is compatible with the project.
+
+Do not blindly rewrite configuration files.
+
+Do not delete existing business logic.
+
+Do not change the backend architecture unless required for a real compatibility issue.
+
+---
+
+# 22. FINAL ACCEPTANCE CHECKLIST
+
+Before declaring the redesign complete, verify all of the following.
+
+VISUAL DESIGN:
+- The product no longer resembles a generic AI-generated dashboard.
+- Typography has a clear hierarchy.
+- Spacing is consistent.
+- The interface has a recognizable visual identity.
+- Cards and panels are used purposefully.
+- Colour communicates state.
+- The layout feels professionally art-directed.
+
+INTERACTIONS:
+- The custom cursor works on supported desktop devices.
+- Text input and selection remain usable.
+- Touch devices use native pointer behavior.
+- Magnetic buttons remain clickable.
+- The Trust Engine responds to actual application state.
+- Device interactions change the real simulator state.
+- Timeline details expand correctly.
+- Navigation remains functional.
+- All visible buttons perform their intended actions.
+
+ANIMATIONS:
+- Transitions are smooth.
+- Animations reflect real application events.
+- Success is only shown after verification.
+- Failures remain visibly distinct.
+- Unverified actions remain unresolved.
+- Reduced-motion preferences are respected.
+- No animation causes significant interaction delays.
+
+REGRESSION:
+- Command submission still works.
+- Planning still works.
+- Approvals still work.
+- Tool execution still works.
+- Verification still works.
+- Failure injection still works.
+- Recovery still works.
+- History remains accurate.
+- Persistence still works.
+- Integrations still report truthful status.
+- Existing tests still pass.
+
+RESPONSIVENESS:
+- No horizontal overflow.
+- Mobile navigation works.
+- Approval controls are usable.
+- Important status information remains visible.
+- All important functions work without hover.
+
+PERFORMANCE:
+- No uncontrolled animation loops.
+- No repeated API requests caused by rendering.
+- No known blocking browser errors.
+- No unnecessary full-page reloads.
+
+Do not mark any criterion as complete without checking it.
+
+---
+
+# 23. EXECUTION INSTRUCTIONS
+
+Now modify the existing ActionGuard AI project.
+
+Do not create a new project.
+
+Do not replace the current application with a static design.
+
+Do not remove working features.
+
+Do not return only a visual proposal or implementation plan.
+
+Implement the actual redesign directly in the project.
+
+Prioritize distinctive design, high-quality interaction, and visual coherence over adding unnecessary features.
+
+The final product should feel like a premium, carefully engineered software experience with an unmistakable visual identity.
+
+When finished, briefly report:
+1. The screens redesigned.
+2. The interactions added.
+3. The animations implemented.
+4. The responsive and accessibility improvements.
+5. The original functionality preserved.
+6. The tests actually run.
+7. Any known limitations.
+
+Begin by inspecting the existing project, then implement the transformation.

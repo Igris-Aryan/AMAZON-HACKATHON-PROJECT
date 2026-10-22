@@ -1,0 +1,1799 @@
+# MASTER BUILD PROMPT: ACTIONGUARD AI
+
+## 1. YOUR ROLE
+
+Act as a principal full-stack engineer, senior AI agent architect, product designer, security engineer, QA engineer, and hackathon-winning product strategist.
+
+Your assignment is to DESIGN, IMPLEMENT, TEST, and DELIVER a complete, polished, working full-stack web application named:
+
+ACTIONGUARD AI
+
+Tagline: "An AI assistant that proves what it did."
+
+Product category: Reliable AI agents, tool orchestration, smart-home automation, and verified task execution.
+
+Primary competition target: Amazon Developer Hackathon 2026 — Alexa+ primary track, using the explicitly permitted simulated Alexa+ experience route.
+
+Secondary target: AWS Builder mini challenge, provided a qualifying AWS service is genuinely integrated and documented.
+
+Additional objective: Create a codebase that can be published as an open-source project and extended with an independently qualifying open-source contribution.
+
+Do not merely describe the architecture, create a mockup, produce a tutorial, or provide code snippets. BUILD THE ACTUAL APPLICATION in the current Google AI Studio project.
+
+Create all necessary source files, frontend components, backend routes, service modules, validation schemas, tests, configuration files, documentation, and sample data.
+
+Run the available checks, resolve errors, and verify the major user workflows before declaring the implementation complete.
+
+Do not stop after generating the landing page.
+
+Do not ask me questions about ordinary implementation choices. Make sensible, secure, production-minded decisions and continue.
+
+If an external integration requires credentials or access that are not available, implement the complete application around a working local simulator, clearly document the optional integration, and never pretend that the unavailable service is connected.
+
+The application must work in demonstration mode without requiring AWS credentials, Ring hardware, Alexa+ preview access, or a physical smart-home device.
+
+Use the current capabilities of the environment and do not assume that a service, SDK, database, deployment target, or API is available unless it is actually supported.
+
+---
+
+# 2. PRODUCT VISION
+
+Most AI assistants can interpret a command and generate a convincing response. However, generating a response is not the same as successfully completing the requested action.
+
+ActionGuard AI addresses this problem.
+
+The application must distinguish between:
+
+1. What the user requested.
+2. What the AI planned to do.
+3. What the user authorized.
+4. What the application actually attempted.
+5. What the tools actually returned.
+6. What a subsequent state check verified.
+7. What remains failed, uncertain, or incomplete.
+
+The central product principle is:
+
+"Never claim an action succeeded merely because the AI intended it to succeed."
+
+Build a reliable agent that can plan, execute permitted actions, independently verify results, recover from failures, and communicate uncertainty honestly.
+
+The application should feel like a sophisticated, real product rather than a generic AI chatbot or a static hackathon demo.
+
+---
+
+# 3. TARGET USERS
+
+Design the application for:
+
+- People who use smart-home devices.
+- Families coordinating household routines.
+- Users who want more trustworthy AI automation.
+- Developers building tool-using AI agents.
+- Users who need transparent records of automated actions.
+
+The first version must focus on one clearly defined use case:
+
+PREPARING A HOUSE FOR SLEEP.
+
+The user should be able to issue a natural-language command, inspect the proposed plan, authorize the relevant operations, execute them, observe a deliberately simulated failure, recover where appropriate, and see the final verified household state.
+
+Support additional scenarios through a scenario selector without compromising the quality of the primary workflow.
+
+---
+
+# 4. NON-NEGOTIABLE PRODUCT REQUIREMENTS
+
+The application must include:
+
+- A complete responsive dashboard.
+- A natural-language command interface.
+- A working AI planning service.
+- Structured action plans.
+- A working smart-home simulator.
+- Persistent simulated device state.
+- Tool execution through backend functions.
+- A permission and approval system.
+- Independent post-action verification.
+- Failure injection and recovery.
+- A transparent execution timeline.
+- A persistent audit history.
+- A working demo mode.
+- Useful empty states and loading states.
+- Error handling.
+- Automated tests.
+- Setup and deployment documentation.
+- An architecture suitable for future MCP integration.
+- An optional AWS integration that can be enabled using server-side credentials.
+- No hard-coded claims of success.
+- No exposed API keys.
+- No fake production integrations.
+
+Every visible interactive control must work.
+
+Do not create buttons that merely look functional.
+
+Do not use fabricated metrics that imply real customer activity, real production usage, or real device connectivity.
+
+Demo information is permitted only when clearly identified as simulated.
+
+---
+
+# 5. TECHNOLOGY STACK
+
+Use the following architecture unless the environment imposes a genuine compatibility constraint.
+
+Frontend:
+- React.
+- TypeScript.
+- Vite if compatible with the current AI Studio project environment.
+- Tailwind CSS or an existing compatible styling system.
+- Lucide icons or another consistent icon library.
+- Recharts only where a chart materially improves the interface.
+
+Backend:
+- Node.js.
+- TypeScript.
+- The server framework already supported by the generated project.
+- REST endpoints with validated request and response schemas.
+
+AI:
+- Gemini through the server-side integration available in Google AI Studio.
+- Use the model configuration supported by the current environment.
+- Keep the model name configurable.
+- Validate all model output before using it.
+
+Validation:
+- Zod or an equivalent maintained validation library.
+
+Testing:
+- Vitest or the compatible test runner available in the project.
+- React Testing Library for important UI behavior where practical.
+- Integration tests for backend workflows.
+- Playwright only if browser automation is supported.
+
+Persistence:
+- A server-side persistence adapter.
+- A working local demonstration database or durable storage adapter appropriate for the environment.
+- Firebase Firestore may be used if provisioning is available and beneficial.
+- If external database provisioning is unavailable, use a clearly documented local persistent adapter.
+
+Do not create a database dependency that prevents the application from starting.
+
+Use the existing project structure where practical. Do not overwrite working project configuration unnecessarily.
+
+Keep frontend and backend responsibilities separate.
+
+All AI requests and privileged tool execution must happen on the server.
+
+---
+
+# 6. DESIGN SYSTEM AND VISUAL IDENTITY
+
+Create a premium, modern, professional interface.
+
+The design should communicate reliability, precision, transparency, and technical sophistication.
+
+Avoid the generic appearance of an ordinary AI chat application.
+
+Visual direction:
+- Dark graphite application background.
+- Deep navy surfaces.
+- Restrained electric-blue accents.
+- Emerald green for verified success.
+- Amber for approval requirements or uncertainty.
+- Red for failures and critical warnings.
+- White and muted gray typography.
+- Subtle borders.
+- Carefully controlled shadows.
+- Moderate corner radii.
+- Consistent spacing.
+- Strong information hierarchy.
+- Smooth but restrained transitions.
+
+Use accessible contrast ratios and visible keyboard focus.
+
+Avoid excessive gradients, glowing borders, unnecessary animations, giant empty hero sections, and decorative elements that consume screen space.
+
+Use a consistent spacing scale and typography system.
+
+Support desktop, tablet, and mobile layouts.
+
+The desktop experience should resemble a premium developer-oriented operations console. The mobile experience should remain readable and usable without horizontal scrolling.
+
+Use icons consistently. Every icon-only button must have an accessible label.
+
+Provide reduced-motion support.
+
+Do not use copyrighted product logos, proprietary screenshots, copyrighted footage, or unauthorized trademarks in the interface.
+
+Use an original ActionGuard AI wordmark created with typography and simple geometric styling.
+
+---
+
+# 7. APPLICATION NAVIGATION
+
+Create a persistent sidebar on desktop and an appropriate compact navigation pattern on mobile.
+
+Include these destinations:
+
+1. Overview
+2. Command Centre
+3. Execution History
+4. Devices
+5. Scenarios
+6. Agent Activity
+7. Integrations
+8. Settings
+
+The active navigation item must be visually distinguishable.
+
+All navigation destinations must render meaningful content.
+
+The application must not contain dead links, placeholder pages, or buttons that navigate nowhere.
+
+---
+
+# 8. OVERVIEW DASHBOARD
+
+Build a polished overview screen containing the following sections.
+
+A. Header
+
+Include:
+- ActionGuard AI wordmark.
+- Environment indicator: DEMO MODE or configured integration status.
+- Current date and time.
+- Connection or simulator health indicator.
+- Settings shortcut.
+- Primary action button: New Command.
+
+B. Main command card
+
+Include:
+- A large natural-language command input.
+- Placeholder: "What would you like me to do?"
+- Example commands.
+- Submit button.
+- Enter-to-submit behavior.
+- Input validation.
+- Loading indicator.
+- Clear error feedback.
+
+C. Device summary
+
+Display simulated devices:
+- Living room lights.
+- Bedroom lights.
+- Thermostat.
+- Front-door lock.
+- Night mode controller.
+
+For each device, display:
+- Device name.
+- Device type.
+- Current state.
+- Connectivity state.
+- Last-updated timestamp.
+- Whether the displayed state is simulated or connected to an actual integration.
+
+D. Current execution
+
+Show:
+- Current command.
+- Current phase.
+- Number of completed actions.
+- Number of failed actions.
+- Number of unverified actions.
+- Number of actions awaiting approval.
+
+Do not calculate these values from decorative constants. Derive them from actual application state.
+
+E. Recent activity
+
+Show the latest actual records from the application's history.
+
+Each record must contain:
+- Timestamp.
+- Command summary.
+- Execution outcome.
+- Verification outcome.
+- Link to execution details.
+
+F. Trust summary
+
+Show the number of actions verified, failed, and unverified within the selected date range.
+
+Label this as demo data when operating in demonstration mode.
+
+Calculate all displayed statistics from stored records.
+
+Include an understandable first-run state if no actions have been executed.
+
+---
+
+# 9. NATURAL-LANGUAGE COMMAND PROCESSING
+
+Implement a complete command-submission workflow.
+
+The user should be able to enter commands such as:
+
+"Prepare my house for sleep."
+
+"Turn off the living room lights and set the bedroom temperature to 22 degrees."
+
+"Check whether the front door is locked."
+
+"Turn off the lights, but don't change the thermostat."
+
+"Prepare the house for sleep, but ask me before changing the door lock."
+
+The application must send the command to a backend orchestration service.
+
+The service must interpret the request and return a structured plan.
+
+Do not directly execute arbitrary code generated by the model.
+
+Do not allow the model to invent executable function names or bypass server-side authorization.
+
+The AI should select only from a predefined registry of permitted tools.
+
+If the command is ambiguous, request clarification rather than guessing about consequential actions.
+
+For ordinary low-risk actions, allow the application to propose reasonable defaults when they are explicitly represented in the plan and the user can review them.
+
+Never invent device capabilities, current device states, successful executions, or verification evidence.
+
+---
+
+# 10. STRUCTURED PLAN SCHEMA
+
+Define and validate a strict schema for every generated plan.
+
+Each plan must contain:
+
+- planId
+- commandId
+- originalCommand
+- humanReadableSummary
+- assumptions
+- clarificationQuestions
+- actions
+- createdAt
+- planStatus
+
+Each action must contain:
+
+- actionId
+- toolName
+- targetDeviceId
+- description
+- requestedState
+- riskLevel
+- requiresApproval
+- dependencies
+- expectedPostcondition
+- executionStatus
+- verificationStatus
+- failureReason
+
+Use explicit enumerations rather than unconstrained strings wherever practical.
+
+Recommended action states:
+
+- proposed
+- awaiting_approval
+- approved
+- executing
+- executed
+- failed
+- skipped
+- cancelled
+
+Recommended verification states:
+
+- not_checked
+- verified
+- failed
+- unverified
+- not_applicable
+
+Risk levels:
+
+- low
+- medium
+- high
+
+Reject plans that:
+- Reference unknown tools.
+- Reference nonexistent devices.
+- Contain invalid arguments.
+- Attempt unsupported operations.
+- Contain malformed dependencies.
+- Contradict an explicit user restriction.
+- Exceed configured action limits.
+- Contain unsafe or unauthorized operations.
+
+Validate model output on the backend before displaying or executing it.
+
+Use deterministic fallback planning for supported demo commands when the AI service is unavailable.
+
+Clearly identify when deterministic fallback planning is being used.
+
+---
+
+# 11. AI AGENT ARCHITECTURE
+
+Implement the agent as a controlled state machine, not as an unrestricted autonomous loop.
+
+The processing pipeline must be:
+
+1. Receive command.
+2. Validate input.
+3. Load relevant device state.
+4. Interpret user intent.
+5. Generate structured plan.
+6. Validate plan against the tool registry.
+7. Apply safety and permission policies.
+8. Present the plan to the user.
+9. Obtain required approval.
+10. Execute approved actions.
+11. Read device state again.
+12. Evaluate expected postconditions.
+13. Record verification evidence.
+14. Recover from eligible failures.
+15. Produce a truthful final report.
+16. Persist the execution record.
+
+Every phase must have explicit state transitions.
+
+Prevent duplicate execution when the user refreshes the page or retries a network request.
+
+Use unique command IDs and idempotency keys where appropriate.
+
+An interrupted workflow must not automatically repeat previously completed physical actions.
+
+On restart, load persisted execution records and determine whether a workflow can safely resume.
+
+If the actual execution state cannot be determined, mark it as uncertain and require reconciliation.
+
+Never infer success from the absence of an exception alone.
+
+---
+
+# 12. WORKING SMART-HOME SIMULATOR
+
+Implement a genuine stateful simulator with a backend device registry.
+
+The initial simulator must include the following devices.
+
+DEVICE 1: Living room lights
+- Device ID: living_room_lights
+- Type: light
+- Initial state: on
+- Supported operations: turn on, turn off, set brightness.
+- Brightness range: 0–100.
+
+DEVICE 2: Bedroom lights
+- Device ID: bedroom_lights
+- Type: light
+- Initial state: on
+- Supported operations: turn on, turn off, set brightness.
+- Brightness range: 0–100.
+
+DEVICE 3: Thermostat
+- Device ID: bedroom_thermostat
+- Type: thermostat
+- Initial temperature: 24 degrees Celsius.
+- Supported temperature range: 16–30 degrees Celsius.
+- Reject invalid temperatures.
+
+DEVICE 4: Front-door lock
+- Device ID: front_door_lock
+- Type: lock
+- Initial state: unlocked.
+- Supported operations: lock, unlock, read state.
+- Unlocking must be treated as a consequential operation requiring explicit approval.
+
+DEVICE 5: Night mode
+- Device ID: night_mode
+- Type: routine controller.
+- Initial state: inactive.
+- Supported operations: enable, disable.
+- The simulator must not silently modify other devices unless the selected routine explicitly defines those operations.
+
+Every device must maintain real state in the simulator.
+
+Executing a tool must mutate that state.
+
+A subsequent state query must return the updated state.
+
+Persist state across page refreshes and backend restarts where the chosen persistence layer permits it.
+
+Include a Reset Demo button that restores initial states after an explicit confirmation.
+
+Show a persistent DEMO SIMULATOR label when operating without real devices.
+
+Never imply that simulated devices are connected to an actual home.
+
+---
+
+# 13. TOOL REGISTRY
+
+Implement server-side tool functions.
+
+Required tools:
+
+1. get_device_state(deviceId)
+2. list_devices()
+3. set_light_state(deviceId, state)
+4. set_light_brightness(deviceId, brightness)
+5. set_thermostat_temperature(deviceId, temperatureCelsius)
+6. lock_door(deviceId)
+7. unlock_door(deviceId)
+8. set_night_mode(enabled)
+9. get_execution_status(commandId)
+10. get_execution_history(filters)
+11. verify_device_state(deviceId, expectedState)
+12. get_simulator_health()
+
+Use typed arguments and validated responses.
+
+The agent must only call registered tools.
+
+Each tool must:
+- Validate input.
+- Check device existence.
+- Check device capabilities.
+- Apply authorization policies.
+- Return a structured result.
+- Record an execution timestamp.
+- Return a useful error on failure.
+- Avoid silently swallowing exceptions.
+
+The tool layer must never accept arbitrary shell commands, arbitrary JavaScript, or unrestricted URLs from the model.
+
+Keep device state mutation inside the simulator service rather than scattering it across frontend components.
+
+---
+
+# 14. APPROVAL AND PERMISSION SYSTEM
+
+Build a visible approval workflow.
+
+Every proposed action must show:
+- What will happen.
+- Which device will be affected.
+- The intended new state.
+- Why the action is needed.
+- Its risk level.
+- Whether approval is required.
+
+Use the following default policy:
+
+LOW RISK:
+Reading device state may proceed without approval.
+
+MEDIUM RISK:
+Turning lights on or off and changing the thermostat may be executed automatically only when the user has enabled that specific automation policy. Otherwise, require approval.
+
+HIGH RISK:
+Unlocking doors must always require explicit approval for that specific action.
+
+Disabling security protections, changing access permissions, or performing similarly consequential operations must not be enabled by default.
+
+Never interpret a general command as blanket authorization for unrelated consequential actions.
+
+Implement:
+- Approve selected action.
+- Approve all eligible actions in the displayed plan.
+- Reject selected action.
+- Cancel execution.
+- Revoke pending approval before execution.
+
+Approval of one action must not approve a different action with changed parameters.
+
+Bind approvals to the specific plan version and action arguments.
+
+Any material plan change must invalidate affected approvals.
+
+Show pending approvals prominently.
+
+The simulator may support unlocking a door after explicit approval, but it must never unlock the door merely because the AI says doing so would be convenient.
+
+---
+
+# 15. INDEPENDENT VERIFICATION ENGINE
+
+This is the core differentiator. Implement it as a separate service from the AI planner and action executor.
+
+After an action is executed, query the current simulator state through a separate read operation.
+
+Compare the observed state against the expected postcondition.
+
+Example:
+
+Requested:
+Turn off living room lights.
+
+Execution:
+The simulator accepts the operation.
+
+Verification:
+A fresh state query returns lights = off.
+
+Result:
+VERIFIED.
+
+Second example:
+
+Requested:
+Set thermostat to 22 degrees Celsius.
+
+Execution:
+The simulator returns a failure.
+
+Verification:
+The current temperature remains 24 degrees Celsius.
+
+Result:
+FAILED.
+
+Third example:
+
+Requested:
+Turn off bedroom lights.
+
+Execution:
+The tool returns an acknowledgment.
+
+Verification:
+The device state cannot be read.
+
+Result:
+UNVERIFIED.
+
+Do not mark the third example as successful.
+
+Record:
+- Expected state.
+- Observed state.
+- Verification timestamp.
+- Verification result.
+- Error details, when available.
+- Source of the observation.
+
+For the simulator, use a separate state-read operation after mutation.
+
+For future real integrations, clearly distinguish simulator verification from genuine device verification.
+
+A provider's acknowledgment is not equivalent to proof of the final physical state.
+
+Never fabricate sensor readings or physical-world evidence.
+
+---
+
+# 16. FAILURE INJECTION AND RECOVERY LAB
+
+Build an interactive Failure Lab.
+
+This is essential to the demo.
+
+Provide controls to enable and disable the following failure scenarios:
+
+A. Thermostat operation failure
+The next thermostat write fails without changing the device state.
+
+B. Verification read failure
+The next post-action state read fails.
+
+C. Delayed operation
+A selected operation takes longer than usual and shows progress.
+
+D. Device offline
+A selected simulated device becomes unavailable.
+
+E. Stale state
+The cached device state differs from the current simulator state.
+
+F. Duplicate request
+Submit the same idempotency key twice and verify that an already completed operation is not performed twice.
+
+G. Partial completion
+One action in a multi-action plan fails while another succeeds.
+
+H. Invalid AI plan
+Attempt to introduce an unknown tool or invalid device argument and confirm that the backend rejects the plan.
+
+The Failure Lab must change actual simulator behavior. It must not merely change a status label.
+
+Each injected failure must be deterministic enough to reproduce.
+
+Provide a one-click "Run Reliability Demo" that executes a documented sequence and demonstrates:
+1. A valid plan.
+2. Successful tool execution.
+3. A failed operation.
+4. An honest failure report.
+5. Recovery where appropriate.
+6. Independent verification.
+7. A final audit record.
+
+Do not automatically retry non-idempotent or consequential actions.
+
+For eligible idempotent operations, use bounded retries with backoff and a maximum attempt count.
+
+If a verification failure occurs after an operation may have succeeded, reconcile the current state before retrying.
+
+---
+
+# 17. COMMAND CENTRE
+
+Create a dedicated execution screen.
+
+The layout must contain:
+
+LEFT PANEL:
+- Original command.
+- Editable command before planning.
+- Scenario selector.
+- Current simulator state.
+- Device availability.
+
+CENTRE PANEL:
+- Structured action plan.
+- Dependencies.
+- Risk indicators.
+- Approval controls.
+- Expected postconditions.
+
+RIGHT PANEL:
+- Live execution timeline.
+- Tool calls.
+- Results.
+- Verification evidence.
+- Failures.
+- Recovery actions.
+
+Use a clear progression:
+
+IDLE
+→ PLANNING
+→ PLAN_READY
+→ AWAITING_APPROVAL
+→ EXECUTING
+→ VERIFYING
+→ COMPLETED / PARTIALLY_COMPLETED / FAILED / UNVERIFIED / CANCELLED
+
+Support mixed outcomes.
+
+For example, if four actions are planned and three succeed while one fails, the final status must not simply be "success."
+
+Display a concise explanation of every failure.
+
+Allow the user to inspect the exact expected and observed states.
+
+Do not expose secrets, internal credentials, or sensitive server environment variables in the timeline.
+
+---
+
+# 18. DEMONSTRATION SCENARIOS
+
+Preconfigure at least five interactive scenarios.
+
+SCENARIO 1: GOOD NIGHT
+
+User command:
+"Prepare my house for sleep. Turn off the living room lights, set the bedroom temperature to 22 degrees, and check whether the front door is locked."
+
+Initial state:
+- Living room lights on.
+- Bedroom thermostat at 24 degrees.
+- Front door unlocked.
+- Bedroom lights on.
+
+Expected behavior:
+- The planner proposes the required actions.
+- The user can inspect the plan.
+- The front-door state is identified correctly.
+- The application does not unlock or lock doors without the required authorization.
+- Authorized actions execute.
+- Each executed action is verified.
+- The final report accurately describes any unresolved condition.
+
+SCENARIO 2: FAILURE RECOVERY
+
+User command:
+"Set the bedroom temperature to 22 degrees."
+
+Enable thermostat write failure.
+
+Expected behavior:
+- The first operation fails.
+- The state remains unchanged.
+- The agent explains the failure.
+- The user can retry.
+- A successful retry is independently verified.
+- Both attempts remain in the audit history.
+
+SCENARIO 3: UNVERIFIED EXECUTION
+
+User command:
+"Turn off the bedroom lights."
+
+Enable verification read failure.
+
+Expected behavior:
+- The tool may execute successfully.
+- The verification request fails.
+- The system marks the result as UNVERIFIED.
+- The system does not claim the operation is verified.
+- The user can initiate reconciliation.
+
+SCENARIO 4: SAFETY BOUNDARY
+
+User command:
+"Unlock the front door and turn on night mode."
+
+Expected behavior:
+- The application identifies the consequential unlock operation.
+- It requests explicit approval.
+- It can execute the permitted routine separately if appropriate.
+- Rejecting the unlock does not block unrelated safe actions.
+- The final report distinguishes the outcomes.
+
+SCENARIO 5: CONTRADICTORY REQUEST
+
+User command:
+"Turn off all the lights, but keep the bedroom lights on."
+
+Expected behavior:
+- The planner respects the explicit exception.
+- Living room lights are turned off.
+- Bedroom lights remain on.
+- The result is verified.
+
+Add additional scenarios if doing so does not compromise the required features.
+
+---
+
+# 19. EXECUTION HISTORY
+
+Create a searchable, filterable history screen.
+
+Store records for:
+- Command submission.
+- Plan creation.
+- Approval decisions.
+- Tool execution attempts.
+- Verification attempts.
+- Failure events.
+- Recovery attempts.
+- Cancellation.
+- Final outcome.
+
+Each execution record must include:
+- Unique ID.
+- Timestamp.
+- Original command.
+- Plan summary.
+- Environment type.
+- Action results.
+- Verification results.
+- Final outcome.
+- Error information when applicable.
+
+Provide filters for:
+- Date range.
+- Outcome.
+- Device.
+- Action type.
+- Verification status.
+- Scenario.
+
+Provide a detail view with a complete chronological timeline.
+
+Provide an Export JSON button for a selected execution.
+
+Validate exported data and avoid including secrets.
+
+If CSV export is implemented, correctly escape commas, quotes, and newlines.
+
+The history must reflect actual stored events, not generated placeholder rows.
+
+---
+
+# 20. DEVICES SCREEN
+
+Build a complete device-management interface.
+
+Show all simulated devices in a clean grid or table.
+
+Each device card must include:
+- Device icon.
+- Name.
+- Device type.
+- Current state.
+- Online/offline status.
+- Last updated.
+- Available operations.
+- Environment label.
+
+Allow permitted manual state changes.
+
+Manual operations must use the same backend tool registry, validation, authorization, and audit system as AI-generated operations.
+
+Do not bypass the policy engine simply because an operation originated from the device screen.
+
+Allow the user to switch between device details and execution history for that device.
+
+Clearly distinguish:
+- Simulated devices.
+- Connected external devices.
+- Unconfigured integrations.
+
+Never label a simulator as a real device.
+
+---
+
+# 21. AGENT ACTIVITY AND TRANSPARENCY
+
+Create an Agent Activity screen.
+
+Show:
+- Command interpretation.
+- Plan creation.
+- Policy checks.
+- Approval requests.
+- Tool calls.
+- Execution results.
+- Verification.
+- Recovery.
+- Final response.
+
+Each event must have a timestamp and appropriate severity.
+
+Provide expandable technical details for developers.
+
+Provide a simplified explanation for ordinary users.
+
+Show whether planning was performed by:
+- Gemini.
+- Deterministic fallback logic.
+
+Show whether a result was:
+- Directly observed.
+- Returned by a simulator.
+- Returned by an external integration.
+- Inferred by the application.
+
+Do not expose hidden chain-of-thought or private internal reasoning.
+
+Instead, provide concise, auditable explanations of decisions, policy checks, and action outcomes.
+
+---
+
+# 22. INTEGRATIONS SCREEN
+
+Create an Integrations page with clear connection status cards.
+
+Integration cards:
+
+1. Local Smart-Home Simulator
+2. Gemini Planning Service
+3. Amazon Bedrock
+4. Alexa+ / MCP Extension
+5. Future Device Integrations
+
+The simulator must be operational by default.
+
+The Gemini planning service should use the supported server-side integration.
+
+For Amazon Bedrock:
+- Provide a real server-side integration adapter where practical.
+- Read AWS credentials from environment variables or the server's credential provider.
+- Never expose AWS credentials to the browser.
+- Never hard-code credentials.
+- Never assume that AWS credentials are available.
+- Show a clear setup status when they are absent.
+- Do not claim Bedrock is connected unless a real request succeeds.
+- Provide an explicit way to select the active planning provider.
+- Retain the simulator and deterministic fallback when Bedrock is unavailable.
+
+For Alexa+ / MCP:
+- Clearly label the current experience as a simulation.
+- Design a reusable tool interface.
+- Keep the simulator independent from any proprietary Alexa+ service.
+- Document the steps required to expose an MCP server separately.
+- Do not claim production Alexa+ integration.
+- Do not claim an MCP server exists unless the actual server implementation is present and working.
+
+For future device integrations:
+- Provide a clean adapter interface.
+- Do not fabricate connection states.
+- Require actual authentication before marking a service connected.
+
+If an integration is not configured, show setup instructions rather than a broken button.
+
+---
+
+# 23. AWS BUILDER MINI-CHALLENGE READINESS
+
+Make the application AWS-ready without making AWS mandatory for local demonstration.
+
+Preferred optional integration:
+Amazon Bedrock for structured planning.
+
+Implement the Bedrock adapter using an appropriate current AWS SDK and supported model configuration.
+
+Keep the model identifier configurable through server-side configuration.
+
+Use structured output or strict schema validation for AI-generated plans.
+
+Handle:
+- Missing credentials.
+- Insufficient permissions.
+- Unsupported model configuration.
+- Throttling.
+- Network failures.
+- Invalid model output.
+- Timeouts.
+- Excessive retries.
+
+Do not silently fall back to another model without showing that a fallback occurred.
+
+Do not claim that Bedrock is integrated merely because an environment variable or package exists.
+
+A real Bedrock integration must make a genuine service call when enabled.
+
+Document:
+- Which AWS service is used.
+- Which application module calls it.
+- What the service does.
+- Which credentials or IAM permissions are required.
+- How to test the integration.
+- What happens when the service is unavailable.
+- Any potential costs.
+
+Use least-privilege access where possible.
+
+Do not require AWS setup to run the default demonstration.
+
+If AWS is not configured, provide a clear AWS NOT CONFIGURED state and a working local demonstration.
+
+Do not describe the application as eligible for the AWS Builder prize until the qualifying integration is implemented, tested, and documented.
+
+---
+
+# 24. MCP-READY ARCHITECTURE
+
+Design the application so that its existing tool registry can be reused by a future Model Context Protocol server.
+
+Define a clean boundary between:
+- Agent orchestration.
+- Tool definitions.
+- Tool execution.
+- Policy enforcement.
+- State verification.
+- Persistence.
+
+If implementing an MCP server as part of the project, use a maintained SDK and implement the required modern protocol and transport correctly.
+
+For this hackathon, the minimum acceptable MCP specification is 2025-11-25 or a later accepted version, using Streamable HTTP for a conventional self-hosted MCP submission.
+
+However, the primary application must remain fully functional even if the MCP server is not implemented.
+
+If implementing MCP is not necessary for the selected Alexa+ simulation route, prioritize the complete simulation first.
+
+Do not create a fake MCP endpoint.
+
+Do not label ordinary REST endpoints as MCP.
+
+Do not claim the simulation is connected to Amazon's production Alexa+ service.
+
+If an MCP extension is implemented, include:
+- Tool schemas.
+- Protocol initialization.
+- Tool listing.
+- Tool invocation.
+- Error responses.
+- Transport handling.
+- Appropriate authentication and authorization.
+- Tests.
+- Documentation.
+
+The MCP layer must call the same underlying policy-controlled application services rather than duplicating unsafe execution logic.
+
+---
+
+# 25. BACKEND API DESIGN
+
+Create clean, versioned endpoints.
+
+Suggested endpoints:
+
+GET /api/v1/health
+
+GET /api/v1/devices
+
+GET /api/v1/devices/:deviceId
+
+POST /api/v1/commands/plan
+
+POST /api/v1/commands/:commandId/approve
+
+POST /api/v1/commands/:commandId/reject
+
+POST /api/v1/commands/:commandId/execute
+
+POST /api/v1/commands/:commandId/cancel
+
+GET /api/v1/commands/:commandId
+
+GET /api/v1/commands/:commandId/events
+
+GET /api/v1/history
+
+GET /api/v1/history/:executionId
+
+POST /api/v1/verification/reconcile
+
+POST /api/v1/simulator/reset
+
+GET /api/v1/simulator/failures
+
+POST /api/v1/simulator/failures
+
+DELETE /api/v1/simulator/failures/:failureId
+
+GET /api/v1/integrations
+
+POST /api/v1/integrations/bedrock/test
+
+Adjust endpoint design where appropriate, but preserve equivalent functionality.
+
+Validate every incoming request.
+
+Use appropriate HTTP status codes.
+
+Return structured errors with:
+- Error code.
+- Human-readable message.
+- Request or correlation ID.
+- Optional safe diagnostic details.
+
+Never return stack traces or secrets to ordinary clients.
+
+Protect state-changing endpoints against duplicate submissions.
+
+If authentication is not implemented, clearly identify the application as a local demonstration and do not present it as a multi-user production service.
+
+---
+
+# 26. DATA MODEL AND PERSISTENCE
+
+Implement clear data models for:
+
+- Device
+- Command
+- Plan
+- PlanAction
+- Approval
+- ToolExecution
+- VerificationRecord
+- ExecutionEvent
+- AuditRecord
+- IntegrationConfig
+- SimulatorFailure
+- UserSettings
+
+Use stable IDs and timestamps.
+
+Represent state transitions explicitly.
+
+Persist enough information to reconstruct an execution timeline after refresh.
+
+Do not store API secrets in ordinary application records.
+
+Do not persist full sensitive prompts or personal information unnecessarily.
+
+Support a clean initial database setup.
+
+Implement schema initialization or migrations where appropriate.
+
+Provide seed data only for the explicitly labeled demonstration environment.
+
+Ensure the reset operation cannot accidentally erase a real external system.
+
+---
+
+# 27. SECURITY AND PRIVACY
+
+Implement security as a first-class feature.
+
+Requirements:
+
+- Keep Gemini and AWS credentials server-side.
+- Never place API keys in frontend source code.
+- Never return environment variables to clients.
+- Validate and constrain model-generated tool calls.
+- Restrict tool access to registered functions.
+- Enforce permissions on the backend.
+- Require explicit approval for high-risk operations.
+- Avoid logging secrets.
+- Avoid rendering untrusted HTML.
+- Use safe output encoding.
+- Apply request-size limits.
+- Add appropriate rate limiting where practical.
+- Avoid overly broad CORS policies.
+- Prevent unauthorized state mutation.
+- Validate IDs and device references.
+- Handle malformed requests safely.
+- Avoid unrestricted network requests based on model output.
+- Do not permit arbitrary file-system access.
+- Do not allow model output to execute shell commands.
+- Use secure cookie settings if authentication is introduced.
+- Do not pretend local demo authentication is production identity management.
+
+For an internet-accessible deployment, explain the additional requirements for authentication, authorization, HTTPS, secret management, and durable storage.
+
+If the project is unauthenticated, make the limitation visible and avoid enabling sensitive real-device integrations.
+
+---
+
+# 28. ACCESSIBILITY AND USABILITY
+
+Ensure:
+- Semantic HTML.
+- Keyboard navigation.
+- Visible focus indicators.
+- Appropriate form labels.
+- Screen-reader-friendly status updates.
+- Sufficient color contrast.
+- Reduced-motion support.
+- Readable typography.
+- Clear distinction between success, failure, and uncertainty.
+- Accessible dialogs.
+- Confirmation before destructive actions.
+- No reliance on color alone to communicate state.
+
+Use status labels and icons together.
+
+Make the most important action and current execution outcome easy to identify.
+
+---
+
+# 29. ERROR HANDLING
+
+Implement a consistent error-handling system.
+
+Handle:
+- AI service unavailable.
+- Invalid AI output.
+- Backend timeout.
+- Device offline.
+- Tool failure.
+- Verification failure.
+- Database failure.
+- Duplicate command.
+- Permission denied.
+- Missing approval.
+- Invalid device state.
+- Unsupported operation.
+- Rate limiting.
+- Missing integration credentials.
+
+For each error:
+1. Preserve already recorded results.
+2. Explain what happened.
+3. Identify what is known and unknown.
+4. Offer an appropriate recovery action.
+5. Avoid repeating unsafe operations automatically.
+6. Record the failure.
+7. Keep the application usable.
+
+Never show a generic success toast after a failed request.
+
+Never erase a previous failure when a later retry succeeds.
+
+The final report must reflect the complete sequence of attempts.
+
+---
+
+# 30. SETTINGS
+
+Create a working settings page.
+
+Include:
+- Default temperature unit: Celsius or Fahrenheit.
+- Preferred planning provider.
+- Automation approval preferences.
+- Confirmation settings.
+- Execution-history retention settings.
+- Demo-mode controls.
+- Reduced-motion preference.
+- Interface density preference.
+- Reset demo data.
+- Export application diagnostics without secrets.
+
+Settings must affect actual behavior where applicable.
+
+If a setting is unsupported, do not present it as functional.
+
+Store preferences in the appropriate persistence layer.
+
+Show a confirmation dialog before resetting the demo environment.
+
+---
+
+# 31. PERFORMANCE AND RESPONSIVENESS
+
+Optimize the application for a smooth demo.
+
+Requirements:
+- Avoid unnecessary frontend re-renders.
+- Avoid duplicate AI requests.
+- Use loading indicators for asynchronous operations.
+- Disable inappropriate repeated submissions.
+- Provide sensible request timeouts.
+- Keep dependencies reasonable.
+- Avoid excessive polling.
+- Clean up event listeners and timers.
+- Handle component unmounting safely.
+- Avoid memory leaks.
+- Use pagination or bounded queries for long histories.
+- Ensure the interface remains usable at common desktop and mobile viewport sizes.
+
+Do not add unnecessary infrastructure merely to make the project appear sophisticated.
+
+---
+
+# 32. TESTING REQUIREMENTS
+
+Create meaningful automated tests.
+
+UNIT TESTS:
+
+1. Valid plan schema.
+2. Invalid plan rejection.
+3. Unknown tool rejection.
+4. Unknown device rejection.
+5. Thermostat temperature validation.
+6. Permission enforcement.
+7. Approval binding to action arguments.
+8. Independent state verification.
+9. Failed execution handling.
+10. Unverified execution handling.
+11. Idempotency behavior.
+12. Dependency handling.
+13. Mixed action outcomes.
+14. Audit-record creation.
+15. Deterministic fallback planning.
+
+INTEGRATION TESTS:
+
+1. Submit a valid command.
+2. Generate a structured plan.
+3. Approve eligible actions.
+4. Execute tools.
+5. Read state after execution.
+6. Verify successful actions.
+7. Simulate a tool failure.
+8. Simulate a verification failure.
+9. Retry an eligible failed action.
+10. Reject a dangerous unapproved action.
+11. Recover from partial completion.
+12. Persist and retrieve execution history.
+13. Reset demo state.
+14. Handle missing AI credentials or unavailable AI services.
+15. Verify that duplicate requests do not repeat completed operations.
+
+FRONTEND TESTS:
+
+1. Dashboard loads.
+2. Navigation works.
+3. Command submission works.
+4. Plan details are displayed.
+5. Approval controls work.
+6. Execution progress updates.
+7. Failures are visible.
+8. Verification statuses are accurate.
+9. History filters work.
+10. Settings change behavior.
+11. Mobile navigation works.
+12. Empty states render correctly.
+
+Add an automated end-to-end test for the primary Good Night workflow if browser testing is supported.
+
+Do not claim that tests pass unless they were actually executed.
+
+If a test cannot run because the environment lacks a required capability, report the limitation clearly.
+
+---
+
+# 33. HACKATHON DEMONSTRATION MODE
+
+Create a dedicated, polished demo mode that works immediately after startup.
+
+Do not require an external smart-home device.
+
+Do not require AWS credentials.
+
+Do not require restricted Alexa+ preview tools.
+
+Use the working simulator and actual backend logic.
+
+Provide a prominent "Run Reliability Demo" button.
+
+When clicked, the application should:
+1. Reset or initialize the simulated state after confirmation.
+2. Submit the primary example command.
+3. Generate or select a validated plan.
+4. Show the plan and required approvals.
+5. Execute authorized operations.
+6. Trigger a documented failure scenario.
+7. Display the actual failure.
+8. Perform appropriate recovery.
+9. Re-read the device state.
+10. Show verification evidence.
+11. Generate a final truthful report.
+12. Save the full execution timeline.
+
+If the sequence includes user approvals, present them clearly and allow the demo to continue after the necessary interaction.
+
+The demo must not use a prerecorded transcript as a substitute for execution.
+
+If deterministic demo logic is used, label it as such.
+
+The Gemini-powered planner may be used when available, but the core demo must remain functional when the AI service is unavailable.
+
+---
+
+# 34. FINAL REPORT FORMAT
+
+After each command, generate a structured final report.
+
+The report must include:
+
+Original request:
+The user's original command.
+
+Overall outcome:
+One of:
+- Completed and verified.
+- Partially completed.
+- Failed.
+- Unverified.
+- Cancelled.
+
+Completed actions:
+List actions that executed and passed verification.
+
+Failed actions:
+List actions that failed, including the reason.
+
+Unverified actions:
+List actions for which sufficient verification evidence was unavailable.
+
+Skipped actions:
+List actions rejected, cancelled, or not executed because prerequisites were not satisfied.
+
+Safety decisions:
+Explain any approval requirement or blocked operation.
+
+Recovery:
+Summarize retries or corrective operations.
+
+Evidence:
+Link to the relevant execution records and verification observations.
+
+Next step:
+Suggest a safe, useful next action if necessary.
+
+Do not describe an entire command as successfully completed when a required action failed or remains unverified.
+
+Do not generate fabricated verification evidence.
+
+---
+
+# 35. README AND PROJECT DOCUMENTATION
+
+Create a professional README containing:
+
+1. Product overview.
+2. Problem statement.
+3. Why ActionGuard AI matters.
+4. Features.
+5. Architecture.
+6. Technology stack.
+7. Screenshots section.
+8. Local setup.
+9. Configuration.
+10. Environment variables.
+11. How demo mode works.
+12. How to run tests.
+13. How to configure Gemini.
+14. How to configure Amazon Bedrock.
+15. Security considerations.
+16. Current limitations.
+17. Deployment instructions.
+18. Open-source license information.
+19. Roadmap.
+20. Hackathon track mapping.
+
+Include an architecture diagram using Mermaid if practical.
+
+Include a sequence diagram for planning, execution, verification, and recovery.
+
+Provide a sample environment configuration file containing placeholders only.
+
+Never include real secrets.
+
+Document which features are:
+- Fully implemented.
+- Implemented in simulation.
+- Optional and unconfigured.
+- Planned but not implemented.
+
+Do not claim support for integrations that do not work.
+
+---
+
+# 36. ENVIRONMENT CONFIGURATION
+
+Create a safe example configuration file.
+
+Include relevant variables such as:
+
+GEMINI_API_KEY
+AI_PROVIDER
+AWS_REGION
+BEDROCK_MODEL_ID
+PERSISTENCE_MODE
+DEMO_MODE
+
+Use the environment variable names expected by the actual implementation.
+
+Do not require AWS variables for demo mode.
+
+Do not expose secrets to the frontend.
+
+Do not commit a populated .env file.
+
+If Google AI Studio provides the Gemini API key automatically, use its supported server-side secret mechanism.
+
+Provide clear startup errors when a required production integration is missing.
+
+For demonstration mode, missing optional integration credentials must not prevent startup.
+
+---
+
+# 37. OPEN-SOURCE READINESS
+
+Prepare the repository for public release.
+
+Include:
+- A suitable open-source license.
+- README.
+- .gitignore.
+- Example environment file.
+- Test instructions.
+- Security disclosure guidance where practical.
+- No secrets.
+- No private user data.
+- No unauthorized third-party assets.
+
+Use an appropriate license, such as Apache-2.0, unless an existing project constraint makes another license necessary.
+
+Do not claim that the Open Source mini challenge has been satisfied merely because the main repository contains a license.
+
+The hackathon requires the applicable additional open-source project or contribution and the required submission details.
+
+Identify a reusable component that could be extracted into a separate contribution, such as a generic action-verification utility.
+
+Do not automatically create a fake contribution URL or claim that a pull request has been opened.
+
+---
+
+# 38. PRODUCT FEEDBACK AND FRICTION LOG
+
+Create documentation templates for hackathon feedback.
+
+The product-feedback template must capture:
+
+- Developer tool, API, or SDK used.
+- Purpose of the integration.
+- What worked well.
+- What needs improvement.
+- Onboarding experience.
+- Whether the developer would use the tool again.
+- Why.
+
+The friction-log template must capture:
+
+- Task attempted.
+- Steps taken.
+- Expected behavior.
+- Actual behavior.
+- Severity.
+- Workaround.
+- Actionable recommendation.
+- Relevant non-sensitive evidence.
+
+Only populate these templates with observations that were actually made during development.
+
+Do not invent broken APIs, missing features, error messages, or personal experiences.
+
+---
+
+# 39. THREE-MINUTE DEMO VIDEO PLAN
+
+Include a suggested demo script in the documentation.
+
+Target duration: approximately 2 minutes and 45 seconds.
+
+0:00–0:15 — Problem
+Explain that an AI acknowledgment does not prove that an action succeeded.
+
+0:15–0:40 — Command
+Enter "Prepare my house for sleep."
+
+0:40–1:05 — Plan and approval
+Show the structured plan and the consequential action approval boundary.
+
+1:05–1:35 — Execution
+Execute permitted actions and show the device state changing.
+
+1:35–2:00 — Failure
+Trigger the thermostat failure and show the honest failure report.
+
+2:00–2:25 — Verification and recovery
+Retry the eligible operation and verify the final state.
+
+2:25–2:45 — Impact
+Show the audit trail, architecture, and AWS integration if genuinely configured.
+
+The script must match the actual application behavior.
+
+Do not imply production hardware connectivity when demonstrating the simulator.
+
+---
+
+# 40. IMPLEMENTATION ORDER
+
+Build the application in this order:
+
+PHASE 1:
+Inspect the existing environment and establish the application structure.
+
+PHASE 2:
+Create the visual design system and navigation.
+
+PHASE 3:
+Implement the backend simulator, persistence, and tool registry.
+
+PHASE 4:
+Implement request validation, structured plans, and policy enforcement.
+
+PHASE 5:
+Implement the Gemini-backed planner and deterministic fallback.
+
+PHASE 6:
+Implement execution, independent verification, and recovery.
+
+PHASE 7:
+Build the dashboard, command centre, history, devices, scenarios, activity, integrations, and settings pages.
+
+PHASE 8:
+Implement the Failure Lab and automated reliability demonstration.
+
+PHASE 9:
+Implement and test the optional AWS integration.
+
+PHASE 10:
+Write documentation, add tests, run checks, and fix errors.
+
+Do not stop after completing any individual phase.
+
+Keep the application runnable as implementation progresses.
+
+Prioritize functional correctness over adding superficial features.
+
+If the environment cannot support every optional integration, finish the complete working core and document the unsupported integration honestly.
+
+---
+
+# 41. ACCEPTANCE CRITERIA
+
+The project is not complete until the following criteria have been checked.
+
+APPLICATION:
+- The application starts.
+- The dashboard renders.
+- All navigation destinations work.
+- The interface is responsive.
+- The design is consistent and polished.
+- The browser console has no known blocking errors.
+
+COMMAND WORKFLOW:
+- The user can enter a command.
+- The backend validates it.
+- A structured plan is generated.
+- The plan is displayed.
+- Required approvals are enforced.
+- Registered tools execute.
+- Simulator state actually changes.
+- A subsequent state read verifies the result.
+- The final report reflects the real outcome.
+
+RELIABILITY:
+- Failed operations are recorded.
+- Unverified operations are not called successful.
+- Duplicate requests do not repeat completed operations.
+- Partial completion is represented correctly.
+- Recovery is bounded and safe.
+- Failure injection changes actual simulator behavior.
+- Execution history survives page refreshes.
+
+SECURITY:
+- Secrets remain server-side.
+- Unknown tools are rejected.
+- Invalid arguments are rejected.
+- High-risk actions require explicit approval.
+- Frontend controls cannot bypass backend authorization.
+- Demo and production integration states are clearly distinguished.
+
+DOCUMENTATION:
+- Setup instructions exist.
+- Environment variables are documented.
+- Tests can be run.
+- Limitations are disclosed.
+- AWS setup is documented.
+- The hackathon demonstration sequence is documented.
+
+TESTING:
+- Available automated checks have been executed.
+- Identified failures have been fixed where possible.
+- Any unexecuted checks are reported honestly.
+
+Do not mark a criterion complete based solely on generated source code. Verify it through available execution, tests, or direct inspection.
+
+---
+
+# 42. FINAL INSTRUCTIONS
+
+Now build ActionGuard AI in the current project.
+
+Make reasonable decisions without asking me to approve ordinary design choices.
+
+Generate the real files and working implementations.
+
+Install or configure only the dependencies needed by the application.
+
+Use the existing Google AI Studio runtime appropriately.
+
+Start with a functional, visually polished application and continue until the required workflows are implemented.
+
+Do not respond with another plan instead of building.
+
+Do not return only sample code.
+
+Do not replace backend functionality with hard-coded frontend responses.
+
+Do not create buttons that have no real behavior.
+
+Do not claim successful integrations, deployments, or tests that have not been completed.
+
+When implementation is complete, provide a concise final report containing:
+
+1. What was built.
+2. The main application URL or preview status.
+3. The implemented features.
+4. The available demonstration workflow.
+5. The automated tests actually executed and their results.
+6. The integrations that genuinely work.
+7. The integrations that still require external credentials or setup.
+8. The remaining limitations.
+9. The exact steps needed to run or deploy the application.
+10. The files or documentation relevant to the hackathon submission.
+
+The finished result must be a credible, usable, testable software product—not merely a visually impressive prototype.

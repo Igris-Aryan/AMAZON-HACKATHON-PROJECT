@@ -1,0 +1,167 @@
+{
+  "devices": [
+    {
+      "id": "living_room_lights",
+      "name": "Living Room Lights",
+      "type": "light",
+      "room": "Living Room",
+      "isOnline": true,
+      "isSimulated": true,
+      "lastUpdated": "2026-10-22T06:47:55.906Z",
+      "state": {
+        "power": "on",
+        "brightness": 100
+      }
+    },
+    {
+      "id": "bedroom_lights",
+      "name": "Bedroom Lights",
+      "type": "light",
+      "room": "Bedroom",
+      "isOnline": true,
+      "isSimulated": true,
+      "lastUpdated": "2026-10-22T06:47:55.906Z",
+      "state": {
+        "power": "on",
+        "brightness": 80
+      }
+    },
+    {
+      "id": "bedroom_thermostat",
+      "name": "Bedroom Thermostat",
+      "type": "thermostat",
+      "room": "Bedroom",
+      "isOnline": true,
+      "isSimulated": true,
+      "lastUpdated": "2026-10-22T06:47:55.906Z",
+      "state": {
+        "temperature": 24,
+        "targetTemperature": 24
+      }
+    },
+    {
+      "id": "front_door_lock",
+      "name": "Front-Door Lock",
+      "type": "lock",
+      "room": "Entrance",
+      "isOnline": true,
+      "isSimulated": true,
+      "lastUpdated": "2026-10-22T06:47:55.906Z",
+      "state": {
+        "locked": false
+      }
+    },
+    {
+      "id": "night_mode",
+      "name": "Night Mode Controller",
+      "type": "routine",
+      "room": "Whole House",
+      "isOnline": true,
+      "isSimulated": true,
+      "lastUpdated": "2026-10-22T06:47:55.906Z",
+      "state": {
+        "active": false
+      }
+    }
+  ],
+  "history": [
+    {
+      "id": "cmd-1792651676093-kigp4",
+      "timestamp": "2026-10-22T06:47:56.093Z",
+      "command": "Set the bedroom temperature to 22 degrees.",
+      "phase": "awaiting_approval",
+      "events": [
+        {
+          "id": "evt-1792651676093-1",
+          "commandId": "cmd-1792651676093-kigp4",
+          "timestamp": "2026-10-22T06:47:56.093Z",
+          "phase": "planning",
+          "type": "COMMAND_RECEIVED",
+          "title": "Command Ingestion",
+          "description": "Natural language instruction received: \"Set the bedroom temperature to 22 degrees.\"",
+          "metadata": {
+            "idempotencyKey": "idem-unique-123"
+          }
+        },
+        {
+          "id": "evt-1792651676093-2",
+          "commandId": "cmd-1792651676093-kigp4",
+          "timestamp": "2026-10-22T06:47:56.093Z",
+          "phase": "awaiting_approval",
+          "type": "PLAN_GENERATED",
+          "title": "Structured Plan Formulated",
+          "description": "Generated 1 action(s) via DETERMINISTIC_FALLBACK planner.",
+          "metadata": {
+            "summary": "Execution plan based on semantic parsing of command.",
+            "actionsCount": 1,
+            "pendingApprovals": true
+          }
+        },
+        {
+          "id": "evt-1792651676093-3",
+          "commandId": "cmd-1792651676093-kigp4",
+          "timestamp": "2026-10-22T06:47:56.093Z",
+          "phase": "awaiting_approval",
+          "type": "APPROVAL_REQUESTED",
+          "title": "Safety Gate Enforced",
+          "description": "Actions with elevated risk profile or requiring authorization are awaiting user confirmation."
+        }
+      ],
+      "environmentType": "SIMULATOR_DEMO",
+      "idempotencyKey": "idem-unique-123",
+      "plan": {
+        "planId": "plan-1792651676093",
+        "commandId": "cmd-1792651676093-kigp4",
+        "originalCommand": "Set the bedroom temperature to 22 degrees.",
+        "humanReadableSummary": "Execution plan based on semantic parsing of command.",
+        "assumptions": [
+          "Generated via deterministic safety planner."
+        ],
+        "clarificationQuestions": [],
+        "actions": [
+          {
+            "actionId": "act-1",
+            "toolName": "set_thermostat_temperature",
+            "targetDeviceId": "bedroom_thermostat",
+            "description": "Set bedroom thermostat temperature to 22°C.",
+            "requestedState": {
+              "deviceId": "bedroom_thermostat",
+              "temperatureCelsius": 22
+            },
+            "riskLevel": "medium",
+            "requiresApproval": true,
+            "approvalStatus": "pending",
+            "dependencies": [],
+            "expectedPostcondition": {
+              "property": "temperature",
+              "expectedValue": 22
+            },
+            "executionStatus": "awaiting_approval",
+            "verificationStatus": "not_checked"
+          }
+        ],
+        "createdAt": "2026-10-22T06:47:56.093Z",
+        "planStatus": "pending_approval",
+        "plannerType": "deterministic_fallback"
+      }
+    }
+  ],
+  "failures": {
+    "thermostatWriteFail": false,
+    "verificationReadFail": false,
+    "delayedOperationMs": 0,
+    "deviceOfflineId": null,
+    "staleStateSimulation": false,
+    "partialCompletionMode": false
+  },
+  "settings": {
+    "temperatureUnit": "celsius",
+    "preferredPlanner": "deterministic",
+    "autoApproveLowRisk": true,
+    "autoApproveMediumRisk": false,
+    "requireExplicitDoorUnlock": true,
+    "reducedMotion": false,
+    "interfaceDensity": "comfortable",
+    "retentionDays": 30
+  }
+}
